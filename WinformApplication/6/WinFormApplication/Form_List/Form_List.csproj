@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2111A561-E002-4207-B238-D8E2C062C259}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Form_List</RootNamespace>
+    <AssemblyName>Form_List</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form02_MDITest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form02_MDITest.Designer.cs">
+      <DependentUpon>Form02_MDITest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form01_MDITest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form01_MDITest.Designer.cs">
+      <DependentUpon>Form01_MDITest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form03_ItemMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form03_ItemMaster.Designer.cs">
+      <DependentUpon>Form03_ItemMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form04_userMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form04_userMaster.Designer.cs">
+      <DependentUpon>Form04_userMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form02_MDITest.resx">
+      <DependentUpon>Form02_MDITest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form01_MDITest.resx">
+      <DependentUpon>Form01_MDITest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form03_ItemMaster.resx">
+      <DependentUpon>Form03_ItemMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form04_userMaster.resx">
+      <DependentUpon>Form04_userMaster.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Assamble\Assamble.csproj">
+      <Project>{3d2dd306-4109-4d3e-8582-f00d9ac87f86}</Project>
+      <Name>Assamble</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
